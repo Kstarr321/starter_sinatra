@@ -10,6 +10,15 @@
             <li><a href=<%="/houses/#{house.id}"%>><%= house.style %></a></li>
         <% end %>
     </ul>
+    <div> 
+        <form action="/owners" method="GET">
+        <input type="submit" value="Go to owners index">
+        </form>
+    
+    </div>
+
+
+
 
     <form action="/houses/new" method="GET">
         <input type="submit" value="Create new listing">
