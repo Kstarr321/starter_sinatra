@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detail page for <%= @house.style %></title>
+</head>
+<body>
+
+    <h1><%= @house.style %></h1>
+    <h2> Color: <%= @house.color %> </h2>
+    <h3>Owned by: <%= @house.owner.name %> </h3>
+
+    
+    <!-- <a href=<%= "/houses/#{@house.id}/edit" %>>Edit this house</a> -->
+    <form action="/houses/<%= @house.id %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Destroy This house">
+    </form> 
+
+    <form action="/houses/<%= @house.id %>/edit" method="POST">
+        <input type="hidden" name="_method" value="PATCH">
+        <input type="submit" value="Update This Listing">
+    </form> 
+
+    <a href="/houses">House Index Page</a>
+</body>
+</html>
