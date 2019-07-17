@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>All homeowners, ever.</title>
+    </head>
+    <body>
+        <ul>
+            <% @owners.each do |owner| %>
+                <li><a href=<%="/owners/#{owner.id}"%>><%= owner.name %></a>
+                </li>
+            <%end%>
+        </ul>
+
+        <form action="/owners/new" method="GET">
+            <input type="submit" value="Create new owner">
+        </form>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homeowner detail</title>
+    </head>
+    <body>
+        <h1> <%= @owner.name %> </h1>
+        <ul>
+            <% @owner.houses.each do |house| %>
+                <li><a href=<%="/houses/#{house.id}"%>> <%= house.style %></a></li>
+            <% end %>
+    </body>
+</html>

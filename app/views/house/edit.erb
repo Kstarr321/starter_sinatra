@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit house</title>
+</head>
+<body>
+    <form action="/houses/<%=@house.id%>" method="POST">
+        <input type="hidden" name="_method" value="PATCH">
+        <input type="text" name="style" value= "<%= @house.style %>" >
+        <input type="text" name="color" value= "<%= @house.color %>" >
+        <input type="submit" value="Finalize update">
+    </form>
+
+</body>
+</html>
